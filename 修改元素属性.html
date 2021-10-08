@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button><br>
+    <img src="image/pink.jpg" alt="" title="刘德华">
+
+    <script>
+        //修改元素属性 src
+        let ldh = document.getElementById('ldh');
+        let zxy = document.getElementById('zxy');
+        let img = document.querySelector('img');
+        //注册事件 处理程序
+        zxy.onclick = function () {
+            img.src = 'image/tudou.jpg';
+            img.title = '张学友';
+        }
+        ldh.onclick = function () {
+            img.src = 'image/pink.jpg';
+            img.title = '刘德华';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN>
+<head>
+    <meta charset=" UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>
+    let arr = [1, 2, 'pink', true];
+    console.log(arr);
+    console.log(arr[1]);
+    //数组元素转换为字符串
+    let arr1 = ['blue', 'pink', 'green', 'red'];
+    let str = '';
+    let sep = '!';
+    for (let i = 0; i < arr1.length; i++) {
+        str += arr1[i] + sep;
+    }
+    console.log(str);
+    //修改数组元素 修改length值
+    arr1.length = 5;
+    console.log(arr1);
+    arr1[4] = 'purple';
+    console.log(arr1);
+    //冒泡排序
+    let arr2 = [1, 2, 3, 4, 5];
+    for (let i = 0; i < arr2.length - 1; i++) {
+        for (let j = 0; j <= length - i - 1; J++) {
+            if (arr2[j] > arr2[j + 1]) {
+                let temp = arr2[j];
+                arr2[j] = arr2[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr2);
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

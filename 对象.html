@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj = {
+            uname: 'zhangsan',
+            age: 18,
+            sex: '男',
+            sayHi:function() {
+                console.log('hi');
+            }
+        }
+        function Star (uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (song) {
+                console.log(song);
+            }
+        }
+
+        let ldh = new Star ('liudehua', 28, 'nan');
+        console.log(ldh.name);
+        console.log(typeof ldh);
+        ldh.sing('bingyu');
+
+        //遍历对象
+        for (let k in obj) {  //或key
+            console.log(k); //k 变量 输出 得到属性名
+            console.log(obj[k]);  //obj[k] 得到属性值
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

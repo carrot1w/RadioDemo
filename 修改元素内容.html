@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>获取系统当前时间</button>
+    <div>时间</div>
+
+    <script>
+        //点击按钮，div中的文字发生变化，显示现在的时间
+        let btn = document.querySelector('button');
+        let div= document.querySelector('div');
+
+        btn.onclick = function () {
+            // div.innerText = '2021-8-18';
+            div.innerText = getDate();
+        }
+
+        function getDate() {
+            var date = new Date();
+            // console.log(date.getFullYear()); 获取年
+            // console.log(date.getMonth()+1);  获取月返回的月份小一个月，+1
+            // console.log(date.getDate());  返回几号
+            // console.log(date.getDay());  返回周几，周日是0
+
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let dates = date.getDate();
+            let arr = ['星期日','星期一','星期二','星期三','星期四','星期无','星期六']
+            let day = date.getDay();
+
+            return '今天是' + year + '年' + month +'月' + dates + '日' + arr[day];
+        }
+    </script>
+</body>
+</html>
